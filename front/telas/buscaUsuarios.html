@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos Usuário</title>
+    <link rel="stylesheet" href="../estilos/buscarUsuarios.css">
+    <script src="../interacao/buscaUsuarios.js"></script>
+    
+</head>
+<body onload="buscaTodosUsuarios()">
+    <header class="cabecalho-home">
+        <div class="logo-home">
+            <a href="home.html"><img src="../imagens/logo2.png" alt=""></a>
+        </div>
+    
+        <button class="btn-sair"><a href="index.html">Sair</a></button>
+    </header>
+
+
+    <section class="container-central">
+
+        <div class="formulario-container">
+
+            <form action="#" method="post" class="new-user">
+
+                <div class="Pesquisar-nome">
+                    <h2>Buscar usuário: </h2>
+                    <label for="nome" class="new-user">Nome do Usuário </label>
+                    <input type="nome" id="nome" name="nome" required placeholder="Digite o nome do usuário">
+    
+                    <button onclick="buscaUsuario()" class="butaoPesquisar">Buscar</button>
+                </div> 
+
+            </form>
+            
+            <div id="lista-usuarios">
+                <h1>Lista de usuários:</h1>
+                <div id="lista-gerenciadores-tabela"></div>
+                <div id="paginacao" class="paginacao">
+                    <button id="botao-voltar" class="butaoPesquisar" onclick="paginaAnterior()" style="display: none;">Voltar</button>
+                    <button id="botao-proximo" class="butaoPesquisar" onclick="proximaPagina()">Próximo</button>
+                </div>
+                </div>  
+            </div>
+           
+        </div>
+    </section>
+</body>
+</html>

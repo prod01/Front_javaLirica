@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javalirica</title>
+    <link rel="stylesheet" href="../estilos/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="../interacao/script.js" defer></script>
+    <script src="../interacao/login.js" defer></script>
+</head>
+<body>
+    <div id="principal">
+        <div id="container-home">
+            <img src="../imagens/logo2.png" alt="fundo">
+            <h1>Bem-vindo ao Javalirica!</h1>
+        </div>
+        
+        <div id="login">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email" class="email">Login</label>
+                    <input type="text" id="email" class="login-texto" placeholder="Digite seu email">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="password">Senha</label>
+                    <input type="password" id="password" class="pass-login" placeholder="Digite sua senha">
+                </div>
+                <div id="btn-login">
+                    <button type="button" onclick="login()" class="btn">Entrar</button>
+                </div>
+            </form>
+        </div>
+        <div id="links-acoes">
+            <a href="recuperarUsuario.html" class="link-acao">Recuperar usuário ou senha</a>
+            <a href="cadastro.html" class="link-acao">Cadastre-se</a>
+        </div>
+    </div>
+</body>
+</html>

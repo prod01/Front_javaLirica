@@ -1,0 +1,268 @@
+Login:
+Request:
+
+Método: 	POST
+Url:  3.141.87.82:8080/auth/login 
+Body: 
+{
+"email": "gerenciador@login.com",
+"password": "senha123"
+}
+Response: 200
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZW9uYXJkby5zaWx2YUBpYmRmYW0ub3JnLmJyIiwiZ2VyZW5jaWFkb3JSb2xlIjoiQURNSU4iLCJpYXQiOjE3MzI5MDcwMDcsImV4cCI6MTczMjkxMDYwN30.cUCqftSrUqcRVXQU0ssDxiwyu_dshwKdgVsHALOjVVoQfx5iVB1yN2xT8QJaby50eh6uMfBTWFMVnKlupqC-xA"
+}
+Erros: 
+401: Email ou senha inválidos
+
+
+
+
+
+
+Gerenciador
+
+Request:
+Descrição: primeiro acesso ao sistema.
+Método: Post
+Url:  3.141.87.82:8080/gerenciador/primeiro
+Body: 
+{
+  "nome": "leo Silva",
+  "role": "ADMIN",
+  "email": "leonardo@gmail.com",
+  "senha": "senha123"
+}
+Exemplo de resposta: 201 -ok
+{
+    "nome": "leo Silva",
+    "role": "ADMIN",
+    "email": "leonardo@gmail.com",
+    "senha": "$2a$10$z74TvyN4sTMPCV0NCfCYt.jJzGE9paGdcm3FYF9CWnDuIlq9YIJkq"
+}
+Erros: 
+409: Já existe um administrador cadastrado no sistema.
+400: Erro ao tentar criar o administrador.
+
+ 
+Request:
+Descrição: Criar um novo gerenciador .
+Método: Post
+Url:  3.141.87.82:8080/gerenciador/novo
+Body: 
+{
+  "nome": "guilherme Silva",
+  "role": "SUBADMIN",
+  "email": "guilherme1@gmail.com",
+  "senha": "senha123"
+}
+
+Exemplo de resposta: 201 -ok
+}
+  "nome": "guilherme Silva",
+  "role": "SUBADMIN",
+  "email": "guilherme1@gmail.com",
+    "senha": "$2a$10$z74TvyN4sTMPCV0NCfCYt.jJzGE9paGdcm3FYF9CWnDuIlq9YIJkq"
+}
+Erros: 
+400: Erro ao tentar criar o administrador.
+409: Email já cadastrado.
+
+
+
+ Request:
+Descrição: Bucar Todos Gerenciadores.
+Método: Get
+Url:  3.141.87.82:8080/gerenciador/todos
+Body:  (Vazio)
+
+Exemplo de resposta: 200 -ok
+{
+  lista de  obj do gerenciador como exemplos acima 
+}
+Erros: 
+500: Internal Server Error .
+
+
+
+
+
+
+
+
+
+
+
+
+
+Livros
+Request:
+Descrição: Bucar por nome.
+Método: Get
+Url:  3.141.87.82:8080/v1/livro/nome?nome=anéis
+Body: 
+{
+    "nome": " aneis"
+}
+Exemplo de resposta: 200 ok
+{
+   Retorna uma lista de todos os livros com “anéis” no nome
+}
+Erros: 
+500: erro interno.
+
+Request:
+Descrição: Bucar todos os livros.
+Método: Get
+Url:  3.141.87.82:8080/v1/livro/todos
+Body: 
+Exemplo de resposta: 201 -ok
+{
+   Retorna uma lista de todos os Livros
+}    Erros: 500: erro interno.
+Request:
+Descrição: Deletar Livro.
+Método: Delete
+Url:  3.141.87.82:8080/v1/livro/delete/1
+Body: 
+{
+    "codigo": " 1"
+}
+Exemplo de resposta: 204 no content
+Erros: 
+404: Livro não encontrado pelo codigo: 1
+
+Request:
+Descrição: Adicionar Livro.
+Método: Post
+Url:  3.141.87.82:8080/v1/livro/novo
+Body: 
+{
+    "nome": "O Senhor dos Anéis",
+    "codigoLivro": "ssa11",
+    "autor": "J.R.R. Tolkien",
+    "categoria": "Fantasia"
+}
+Exemplo de resposta: 201
+Retorna o objeto criado acima com o id
+Erros:  400- Erro ao salvar lirvo 
+
+
+Leitor
+Request:
+Descrição: Bucar Todos.
+Método: Get
+Url:  3.141.87.82:8080/leitor/todos
+Body: 
+Exemplo de resposta: 200
+{
+	Retorna uma lista com todos os leitores 
+}
+Erros: 
+500: Erro interno 
+
+
+
+Request:
+Descrição: Bucar por cpf.
+Método: Get
+Url:  3.141.87.82:8080/leitor/00197659080
+Body: 
+Exemplo de resposta: 200
+{
+	Retorna o obj do leitor
+}
+Erros:  404: Leitor não encontrado 
+Request:
+Descrição: Atualizar leitor por cpf.
+Método: Put
+Url:  3.141.87.82:8080/leitor/00197659080
+Body: 
+{
+    "email": "cr7@gmail.com"
+}
+
+Exemplo de resposta: 204
+Erros:  
+404: Leitor não encontrado 
+409: Já existe um usuário com este email.
+
+
+Request:
+Descrição: Bloquear leitor por cpf.
+Método: Put
+Url:  3.141.87.82:8080/leitor/bloquear/00197659080
+Body: 
+Exemplo de resposta: 204 
+Erros:  
+404: Leitor não encontrado 
+
+
+Request:
+Descrição: Novo leitor.
+Método: Post
+Url:  3.141.87.82:8080/leitor/novo
+Body: 
+{
+    "nome": "Pedro Alves",
+    "cpf": "96032767078",
+    "email": "pedro@gmail.com",
+    "celular": "31999999999"
+}
+
+Exemplo de resposta: 201
+Erros:  
+400: erro ao salvar leitor
+409: Já existe um usuário com este email.
+
+
+
+
+
+
+
+
+
+Empréstimo
+Request:
+Descrição: Realizar empréstimo.
+Método: Put
+Url:  3.141.87.82:8080/emprestimo/save
+Body: 
+{
+    "cpf": "81010557033",
+    "codigoLivro": "ssa01"
+}
+
+Exemplo de resposta: 200 
+{
+	Retorna um obj do empréstimo com dados do leitor e livro 
+}
+Erros:  
+400: livro indisponível 
+404: Livro não encontrado pelo cod 
+
+Request:
+Descrição: Bucar todos os empréstimos ativos.
+Método: Get
+Url:  3.141.87.82:8080/emprestimo/todos
+Body: 
+Exemplo de resposta: 200
+{
+	Lista de emprestimos
+}
+Erros:  400: erro interno 
+
+
+Request:
+Descrição: Finalizar emprestimo.
+Método: Post
+Url:  3.141.87.82:8080/emprestimo/{id do emprestimo} ex:1
+Body: 
+Exemplo de resposta: 204
+{
+	Retorna o obj do leitor
+}
+Erros:  
+400: Erro interno
+404: empréstimo não encontrado pelo id 

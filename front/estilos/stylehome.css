@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+       /*background: url("../imagens/backgr.png");*/
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-color: #f5f5f5;
+       min-width: 100vh;
+
+    }
+
+
+
+.cabecalho-home {
+    display: flex;
+    gap: 250px;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    width: 100%;
+}
+
+h3{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.logo-home a img{
+    cursor: pointer;
+    height: 200px;
+}
+
+.btn-sair {
+    background-color: rgb(213, 17, 17);
+    border-radius: 5px;
+    border-color: rgb(213, 17, 17);
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.btn-sair a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: #e60000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-sair a:hover {
+    background-color: #ff3333;
+}
+
+/*
+.menu-lateral{
+    margin-top: 30px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.container-menu-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-lateral button {
+    background-color: #97694ffc;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.menu-lateral button a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu-lateral button a:hover {
+    color:rgb(166, 159, 159);
+    text-decoration: none;
+}
+
+.menu-lateral img {
+    width: 20px; 
+    margin-left: 10px;
+}
+
+*/
+
+
+
+.container-central {
+    margin-left: 50px; 
+    padding: 100px;
+}
+
+.container-central-livros {
+     margin-left: 300px; 
+     padding: 100px;
+ }
+
+.container-de-opcoes img{
+    height: 100px;
+    width: 100px;
+    display: grid;
+}
+.container-de-opcoes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.6em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #97694ffc;
+}
+
+.btn-container a {
+    text-decoration: none;
+    margin-top: 15px;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+}
+.btn-container a:hover {
+    color: rgb(166, 159, 159);
+}
+
+.container-de-opcoes-controle{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-de-opcoes-controle img{
+    height: 25px;
+    width: 25px;
+}
+
+.btn-container-opcoes-controle-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: black;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(0, 55, 235);
+}
+.btn-container-opcoes-controle-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: black;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(249, 241, 0);
+}
+.btn-container-opcoes-controle-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: black;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(3, 248, 23);
+}
+
+.btn-container-opcoes-controle p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.fundo-controle{
+    margin-top: 10px;
+}
+
+/* form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #8700ad;
+    border-radius: 4px;
+    font-size: 16px;
+} */
+
+.btn-confirmar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    color: black;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(4, 255, 42);
+}
+
+.formulario-container h2{
+    font-size: 30px;
+}
+.formulario-container label{
+    font-size: 20px;
+    padding: 10px;
+}
+.formulario-container input{
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.new-user form select {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 25px;
+    border: 1px solid #8700ad;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.tabela-leitores{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-leitores th, .tabela-leitores td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.tabela-leitores th {
+    background-color: #007BFF;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tabela-leitores tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.paginacao button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.paginacao button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.tabela-emprestimo {
+    width: 90%; /* Reduz a largura da tabela */
+    margin: 20px auto; /* Centraliza a tabela */
+    border-collapse: collapse;
+    font-size: 1em;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-emprestimo th,
+.tabela-emprestimo td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.tabela-emprestimo th {
+    background-color: #007BFF; /* Fundo azul */
+    color: white; /* Texto branco */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tabela-emprestimo tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fundo alternado */
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.paginacao button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.paginacao button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+
+
+
+

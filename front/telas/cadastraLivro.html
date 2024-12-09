@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Livros</title>
+    <link rel="stylesheet" href="../estilos/stylehome.css">
+    <link rel="stylesheet" href="../estilos/cadastroLivros.css">
+    <script src="../interacao/cadastraLivro.js"></script>
+    <header class="cabecalho-home">
+        
+        <div class="logo-home">
+            <a href="home.html"><img src="../imagens/logo2.png" alt=""></a>
+        </div>
+        <button class="btn-sair"><a href="index.html">Sair</a></button>
+    </header>
+
+    <main class="container-central">
+        <div class="formulario-container">
+            <h2>Cadastrar Livros</h2>
+
+            <form id="formCadastroLivros">
+                <div class="form-group">
+                    <label for="nomeLivro">Nome do Livro:</label>
+                    <input type="text" id="nomeLivro" name="nomeLivro" placeholder="Digite o nome do livro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="codLivro">Código do Livro:</label>
+                    <input type="text" id="codLivro" name="codLivro" placeholder="Digite o código do livro" maxlength="5"required>
+                </div>
+
+                <div class="form-group">
+                    <label for="autorLivro">Autor:</label>
+                    <input type="text" id="autorLivro" name="autorLivro" placeholder="Digite o autor do livro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoriaLivro">Categoria:</label>
+                    <input type="text" id="categoriaLivro" name="categoriaLivro" placeholder="Digite a categoria do livro" required>
+                </div>
+
+                <div id="btn-container">
+                    <button type="button" class="btn-confirmar" onclick="cadastraLivro()">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

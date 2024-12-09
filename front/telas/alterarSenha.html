@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha</title>
+    <link rel="stylesheet" href="../estilos/stylehome.css">
+    <link rel="stylesheet" href="../estilos/controleUsuarioGlobal.css">
+    <script src="../interacao/alterarSenha.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho-home">
+        <div class="logo-home">
+            <a href="home.html">
+                <img src="../imagens/logo2.png" alt="Logo">
+            </a>
+        </div>
+        <button class="btn-sair">
+            <a href="index.html">Sair</a>
+        </button>
+    </header>
+    
+    <main>
+        <section class="container">
+            <div class="formulario-container">
+                <h2 class="senha-h2">Alterar Senha</h2>
+                <form action="#" method="post" class="formulario-password">
+                    <div class="form-group">
+                        <label for="current-password" class="label-pass">Senha Atual:</label>
+                        <input type="password" id="current-password" name="current-password" required class="input-pass">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-password" class="label-pass">Nova Senha:</label>
+                        <input type="password" id="new-password" name="new-password" required class="input-pass">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password" class="label-pass">Repetir Nova Senha:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required class="input-pass">
+                    </div>
+
+                    <button type="submit" class="btn-confirmar">Confirmar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

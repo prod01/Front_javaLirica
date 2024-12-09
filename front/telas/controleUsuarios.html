@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Usuários</title>
+    <link rel="stylesheet" href="../estilos/stylehome.css">
+    <link rel="stylesheet" href="../estilos/controleUsuarios.css">
+    <script src="../interacao/script.js"></script>
+   
+</head>
+<body>
+    <header class="cabecalho-home">
+        <div class="logo-home">
+            <a href="home.html"><img src="../imagens/logo2.png" alt=""></a>
+        </div>
+       
+        <button class="btn-sair"><a href="index.html">Sair</a></button>
+    </header>
+
+
+    <section class="container-central">
+
+        <div class="container-de-opcoes-controle">
+            <h1>Controle de administradores: </h1> 
+
+            <div class="btn-container-opcoes-controle-1" onclick="navigateTo('')">
+                <img src="../imagens/cadeado.png" alt="">
+                <p onclick="alteraSenha()" > Alterar Senha</p> 
+            
+            </div>
+           
+            <div class="btn-container-opcoes-controle-2" onclick="navigateTo('')">
+                <img src="../imagens/pessoaplus.png" alt="">
+                <p onclick="cadastraUsario()" >Criar novo usuário</p>
+            </div>
+
+            <div class="btn-container-opcoes-controle-3" onclick="navigateTo('')">
+                <img src="../imagens/pessoas.png" alt="">
+                <p onclick="buscaUsuario()" >Ver todos os usuário</p> 
+            </div>
+
+        </div>
+        
+        <div class="fundo-controle">
+            <img src="../imagens/fundo.jpg" alt="">
+        </div>
+
+    </section>
+</body>
+</html>

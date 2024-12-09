@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Livros</title>
+    <link rel="stylesheet" href="../estilos/stylehome.css">
+    <link rel="stylesheet" href="../estilos/buscarLivros.css">
+    <script src="../interacao/buscaLivros.js"></script>
+</head>
+<body onload="fetchAllBooks()">
+    <header class="cabecalho-home">
+        <div class="logo-home">
+            <a href="home.html"><img src="../imagens/logo2.png" alt="Logo"></a>
+        </div>
+        <button class="btn-sair"><a href="index.html">Sair</a></button>
+    </header>
+    <section id="container-central">
+        <div class="Pesquisar-nome">
+            <h2>Pesquisar por nome:</h2>
+            <label for="nome" class="campoBucar">Nome do Livro:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o nome do livro">
+            <button onclick="buscaLivro()" class="butaoPesquisar">Buscar</button>
+            <div>
+                <button onclick="chamaTelaCadastraLivro()" class="butaoCadastrar">Cadastrar Livro</button>
+            </div>
+        </div>
+        <div id="lista-livros">
+            <h1>Lista de livros:</h1>
+            <div id="lista-livros-tabela"></div>
+            <div id="paginacao" class="paginacao">
+                <button id="botao-voltar" class="butaoPesquisar" onclick="paginaAnterior()" style="display: none;">Voltar</button>
+                <button id="botao-proximo" class="butaoPesquisar" onclick="proximaPagina()">Próximo</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

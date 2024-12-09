@@ -1,0 +1,96 @@
+/* Estrutura principal */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+.cabecalho-home .logo-home img {
+    height: 180px;
+}
+
+.cabecalho-home .btn-sair a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: #e60000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cabecalho-home .btn-sair a:hover {
+    background-color: #ff3333;
+}
+
+/* Conteúdo central */
+.container-central {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário */
+.formulario-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0073e6;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0073e6;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+}
+
+/* Botão */
+#btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.6em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn-confirmar {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirmar:hover {
+    background-color: #005bb5;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Usuário</title>
+    <link rel="stylesheet" href="../estilos/stylehome.css">
+    <link rel="stylesheet" href="../estilos/cadastroLivros.css">
+    <link rel="stylesheet" href="../estilos/buscarUsuarios.css">
+    <script src="../interacao/cadastroUsuarios.js"></script>
+    <header class="cabecalho-home">
+        
+        <div class="logo-home">
+            <a href="home.html"><img src="../imagens/logo2.png" alt=""></a>
+        </div>
+        <button class="btn-sair"><a href="index.html">Sair</a></button>
+    </header>
+
+    <main class="container-central">
+        <div class="formulario-container">
+            <h2>Novo Usuário: </h2>
+
+            <form id="formCadastroLivros">
+                <div class="form-group">
+                    <label for="nome" class="user-label">Nome do Usuário </label>
+                    <input type="text" id="nome" name="nome" required class="user-input"placeholder="Digite o nome do usuário">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="user-label" >Email : </label>
+                    <input type="text" id="email" name="email" required class="user-input"placeholder="Digite o e-mail do usuário"> 
+                </div>
+
+                <div class="form-group">
+                    <label for="senha" class="user-label" >Senha: </label>
+                    <input type="password" id="senha" name="senha" required class="user-input" placeholder="Digite a senha do usuário">
+                </div>
+
+                <div class="form-group tipo-usuario-group">
+                    <label for="tipoUsuario" class="user-label">Tipo de Usuário:</label>
+                    <select name="tipoUsuario" id="tipoUsuario" required class="tipo-usuario-select">
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="SUBADMIN">Comum</option>
+                    </select>
+                </div>
+
+                <div id="btn-container">
+                    <button type="button" class="btn-confirmar" onclick="cadastraUsario()">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

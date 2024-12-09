@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locações</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../estilos/stylehome.css">
+    <link rel="stylesheet" href="../estilos/buscarLivros.css">
+    <script src="../interacao/buscaLocacoes.js" defer></script>
+    <script src="../interacao/devolveLivro.js" defer></script>
+    <script src="../interacao/script.js"></script>
+   
+</head>
+<body onload="fetchAllLocacoes()">
+
+    <header class="cabecalho-home">
+        <div class="logo-home">
+            <a href="home.html"><img src="../imagens/logo2.png" alt="Logo"></a>
+        </div>
+        <button class="btn-sair"><a href="index.html">Sair</a></button>
+    </header>
+
+    <section id="container-central">
+        <div class="Pesquisar-nome">
+            <div id="pesquisa-locacao">
+                <div class="container-pesquisa">
+                    <h2>Pesquisar Locação:</h2>              
+                    <label for="cpfLeitor" class="campoBucar">Cpf do leitor: </label>
+                    <input type="text" id="cpfLeitor" name="cpfLeitor" required placeholder=" CPF">
+                    <button onclick="buscaLocacaoPorCPF()" class="butaoPesquisar">Buscar</button>
+                </div>
+            
+                <div class="container-devolucao">
+                    <h2>Registrar Devolução:</h2>
+                    <label for="idLocacao" class="campoBucar">ID da locação: </label>
+                    <input type="text" id="idLocacao" name="idLocacao" required placeholder=" ID da locação">
+                    <button onclick="chamaFinalizarEmprestimo()" class="butaoPesquisar">Devolver</button>
+                </div>
+            </div>
+    
+            <div>
+                <button onclick="chamaTelafazerlocaco()" class="butaoCadastrar">Realizar nova locação</button>
+            </div> 
+
+            <div id="lista-livros">
+                <h1>Lista de Locações Ativas:</h1>
+                <div id="lista-locacoes-tabela"></div>
+                
+                <!-- Paginação -->
+                <div id="paginacao" class="paginacao">
+                    <button id="botao-voltar" class="butaoPesquisar" onclick="paginaAnterior()" style="display: none;">Voltar</button>
+                    <button id="botao-proximo" class="butaoPesquisar" onclick="proximaPagina()">Próximo</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>

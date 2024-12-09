@@ -1,0 +1,91 @@
+
+#container-central {
+    font-family: Arial, sans-serif;
+}
+
+.Pesquisar-nome {
+    font-size: 18px;
+    margin: 20px 80px; 
+}
+.Pesquisar-nome h2 {
+    width: 300px;
+    margin-bottom: 15px;
+}
+.Pesquisar-nome input {
+   
+    margin-left: 10px;
+}
+.butaoPesquisar {
+    background-color:  #0073e6;
+    border-radius: 5px;
+    color: #fff ;
+    border-color:  #0073e6;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.butaoCadastrar {
+    background-color: #0073e6;
+    border-radius: 5px;
+    color: #fff;
+    border-color:  #0073e6;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+#lista-livros h1{
+    text-align: center;
+    margin-top: 40px;
+}
+.tabela-livros {
+    width: 90%; /* Ajuste a largura da tabela, por exemplo, 80% do container */
+    margin: 20px auto; /* Centraliza horizontalmente (auto nas laterais) */
+    border-collapse: collapse;
+    font-size: 1em;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-livros th,
+.tabela-livros td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabela-livros th {
+    background-color: #007BFF; /* Azul */
+    color: white; /* Texto branco */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#pesquisa-locacao {
+   width: 850px;
+   height: 160px;
+}
+
+.container-devolucao{
+    float: right;
+}
+.container-pesquisa{
+    float: left;
+}
+.Pesquisar-nome input {
+    height: 33px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.Pesquisar-nomeinput:focus {
+    outline: none;
+    border-color: #0073e6;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+}

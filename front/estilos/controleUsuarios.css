@@ -1,0 +1,22 @@
+.container-central {
+    font-family: Arial, sans-serif;
+    background-color:rgba(240, 235, 235, 0.816);
+    border-radius: 25px;
+}
+
+.fundo-controle img{
+    justify-content: center;
+    width: 100%;
+    border-radius: 25px;
+    
+} 
+
+.container-de-opcoes-controle h1{
+    font-size: 30px;
+}
+.container-de-opcoes-controle {
+    display: flex;
+    justify-content: center;
+    
+}
+
